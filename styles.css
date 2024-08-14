@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+} 
+.container {
+    width: 200px;
+    height: 300px;
+    border: 2px solid purple; 
+    padding: 20px;          
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.btn1 {
+    background-color: none; 
+    color: black;             
+    border: 2px solid #4CAF50;
+}
+
+.avatar_container {
+    display: flex;  
+}
+
+.back_img {
+    background-image: url('./img_1.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.name {
+    white-space: nowrap;
+    color: black;             
+    border: 2px solid #4CAF50
+  }
+.song {
+   white-space: nowrap;
+    color: black;             
+    border: 2px solid #4CAF50
+    
+}
+.avatar {
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%;
+}
+.icon img {
+    object-fit:cover
+}
+.heart {
+    width: 50px; 
+    height: 50px;
+    background-position: center;
+    background-size: cover; 
+    border-style: none;
+    
+}
+
+.tooth {
+    width: 60px;
+    height: 120px;
+    border: 1px solid black;
+    background:yellow
+}
+
+.cavity {
+    width: 15px;
+    height: 15px;
+    background: black;
+    position: relative;
+}
+
+
+/* z-index: 5; */
