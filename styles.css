@@ -13,58 +13,80 @@ header {
 .container {
     width: 200px;
     height: 300px;
-    border: 2px solid purple; 
-    padding: 20px;          
-    margin: 20px;
-    justify-content: space-between;
+    /* border: 2px solid purple;  */
+    padding: 0;          
+    margin: 0;
+    /* justify-content: center;
+    align-items: center; */
 }
-
 .btn1 {
     background-color: none; 
-    color: black;             
-    border: 2px solid #4CAF50;
+    color: black;
+    border-style: none;
 }
-
 .avatar_container {
     display: flex;  
 }
-
 .back_img {
     background-image: url('./img_1.jpg');
     background-position: center;
     background-size: cover;
 
 }
-
 .name {
     white-space: nowrap;
-    color: black;             
-    border: 2px solid #4CAF50
-  }
+    color: black;
+}
 .song {
    white-space: nowrap;
-    color: black;             
-    border: 2px solid #4CAF50
-    
+    color: black;
+}
+.header_texts{
+    padding: 3px;          
+    margin: 2px;  
 }
 .avatar {
-    width: 25px; 
-    height: 25px;
+    padding: 5px;          
+    margin: 2px;
+    width: 33px; 
+    height: 33px;
     border-radius: 50%;
 }
 .icon img {
     object-fit:cover
 }
 .heart {
-    width: 50px; 
-    height: 50px;
-    background-position: center;
+    background-position: center; 
     background-size: cover; 
     border-style: none;
-    
+}
+.comment {
+    background-position: center;
+    background-size: cover;
+    border-style: none;
+}
+.share {
+    background-position: center; 
+    background-size: cover; 
+    border-style: none;
+}
+.my_comment_space {
+    background-position: center; 
+    background-size: cover;
+    display: flex; 
+}
+.comment_text {
+    text-align: left;
+    border-style: none;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
 }
 
-.tooth {
+
+/* .tooth {
     width: 60px;
     height: 120px;
     border: 1px solid black;
@@ -76,7 +98,7 @@ header {
     height: 15px;
     background: black;
     position: relative;
-}
+} */
 
 
 /* z-index: 5; */

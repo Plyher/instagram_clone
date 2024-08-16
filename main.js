@@ -15,34 +15,48 @@ function likePostFn() {
 }
 let isHello = true
 
-function myCommentFn() {
-    const cmt = document.getElementById('myComment')
+function myCommentSpaceFn() {
+    const cmt = document.getElementById('myCommentSpace')
     console.log(cmt)
     if(isHello) { 
-        cmt.textContent = 'goodbye Igor!'
+        cmt.textContent = 'Comment added!'
         isHello = false
         // end of fn
     } else { 
-        cmt.textContent = 'hello Igor!'
+        cmt.textContent = 'Add Comment!'
         isHello = true
     }
     //
 }
 let isBlack = true
 
-function testFn() {
-    const cv = document.getElementById('noir')
-    console.log(cv)
-    if(isBlack) { 
-        cv.style['z-index'] = '100';
-        isBlack = false
+// function testFn() {
+//     const cv = document.getElementById('noir')
+//     console.log(cv)
+//     if(isBlack) { 
+//         cv.style['z-index'] = '100';
+//         isBlack = false
+       
+//     } else { 
+//         cv.style['z-index'] = '-100';
+//         isBlack = true
+//     }
+    
+// }
+let isOpen = true
+
+function openCommentTextFn() {
+    const openText = document.getElementById('texte')
+    console.log(openText)
+    if(isOpen) { 
+        openText.style.overflow = 'hidden';
+        isOpen = false
        
     } else { 
-        cv.style['z-index'] = '-100';
-        isBlack = true
+        openText.style.overflow = 'visible';
+        isOpen = true
     }
     
 }
-
 
 // zb.style.zIndex = '-100';
