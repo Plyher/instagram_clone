@@ -15,7 +15,8 @@ header {
     height: 300px;
     /* border: 2px solid purple;  */
     padding: 0;          
-    margin: 0;
+    margin: 20px;
+    margin-top: 20px;
     /* justify-content: center;
     align-items: center; */
 }
@@ -31,7 +32,6 @@ header {
     background-image: url('./img_1.jpg');
     background-position: center;
     background-size: cover;
-
 }
 .name {
     white-space: nowrap;
@@ -57,7 +57,7 @@ header {
 }
 .heart {
     background-position: center; 
-    background-size: cover; 
+    background-size: cover; git
     border-style: none;
 }
 .comment {
@@ -76,6 +76,8 @@ header {
     display: flex; 
 }
 .comment_text {
+    /* display: inline-block; */
+    /* field-sizing: content; */
     text-align: left;
     border-style: none;
     overflow: hidden;
@@ -84,7 +86,50 @@ header {
 	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 }
-
+.border {
+    border: 2px solid rgb(128, 0, 119);
+}
+.phone {
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    height: 560px;
+    border-radius: 15px;
+    padding: 0;          
+    margin: 0;
+    border: 1px solid black;
+}
+.phone::-webkit-scrollbar {
+    width: 0;
+}
+.container_2 {
+    border: 1px solid black;
+    width: 200px;
+    height: 100px;
+    padding: 0px;          
+    margin: 20px; 
+}
+.back_img2 {
+    background-image: url('./img2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.back_img3 {
+    background-image: url('./img3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.back_img4 {
+    background-image: url('./img4.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.back_img5 {
+    background-image: url('./img5.jpg');
+    background-position: center;
+    background-size: cover;
+}
 
 /* .tooth {
     width: 60px;
