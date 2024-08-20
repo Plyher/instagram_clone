@@ -11,6 +11,9 @@ header {
     text-align: center;
 } 
 .container {
+    background-image: url('./img_1.jpg');
+    background-position: center;
+    background-size: cover;
     width: 200px;
     height: 300px;
     /* border: 2px solid purple;  */
@@ -28,11 +31,11 @@ header {
 .avatar_container {
     display: flex;  
 }
-.back_img {
+/* .back_img {
     background-image: url('./img_1.jpg');
     background-position: center;
     background-size: cover;
-}
+} */
 .name {
     white-space: nowrap;
     color: black;
