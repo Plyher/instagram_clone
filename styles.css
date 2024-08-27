@@ -11,7 +11,7 @@ header {
     text-align: center;
 } 
 .container {
-    background-image: url('./img_1.jpg');
+    /* background-image: url('./images/img_1.jpg'); */
     background-position: center;
     background-size: cover;
     width: 200px;
@@ -20,6 +20,7 @@ header {
     padding: 0;          
     margin: 20px;
     margin-top: 20px;
+    padding-top: 20px;
     /* justify-content: center;
     align-items: center; */
 }
@@ -31,11 +32,11 @@ header {
 .avatar_container {
     display: flex;  
 }
-/* .back_img {
-    background-image: url('./img_1.jpg');
+.back_img {
+    /* background-image: url('./img_1.jpg'); */
     background-position: center;
     background-size: cover;
-} */
+}
 .name {
     white-space: nowrap;
     color: black;
@@ -102,6 +103,7 @@ header {
     padding: 0;          
     margin: 0;
     border: 1px solid black;
+    margin-top: 20px;
 }
 .phone::-webkit-scrollbar {
     width: 0;
@@ -114,22 +116,22 @@ header {
     margin: 20px; 
 }
 .back_img2 {
-    background-image: url('./img2.jpg');
+    /* background-image: url('./images/img2.jpg'); */
     background-position: center;
     background-size: cover;
 }
 .back_img3 {
-    background-image: url('./img3.jpg');
+    /* background-image: url('./images/img3.jpg'); */
     background-position: center;
     background-size: cover;
 }
 .back_img4 {
-    background-image: url('./img4.jpg');
+    /* background-image: url('./images/img4.jpg'); */
     background-position: center;
     background-size: cover;
 }
 .back_img5 {
-    background-image: url('./img5.jpg');
+    /* background-image: url('./images/img5.jpg'); */
     background-position: center;
     background-size: cover;
 }
