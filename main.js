@@ -1,17 +1,7 @@
-
-// Creating border Phone
-const borderPhone = document.createElement('div');
-borderPhone.className = "phone";
-document.body.append(borderPhone)
-
-//Creating function for the post
-function createPost(avatarSrc, song, backgroundImg, buttonId, openCommentText, comment, ) {
-    let isFilled = false;
-    let isOpen = true;
-
+let isFilled = false;
     // creating function for the like button
-    function likePostFn() {
-        const img = document.getElementById(buttonId);
+    function likePostFn(buttonId) {
+        const img = document.getElementsById(buttonId);
         if(!isFilled) { 
             img.src = './images/coeur.png';
             isFilled = true;
@@ -21,6 +11,19 @@ function createPost(avatarSrc, song, backgroundImg, buttonId, openCommentText, c
         };
     
     };
+
+
+
+// Creating border Phone
+const borderPhone = document.createElement('div');
+borderPhone.className = "phone";
+document.body.append(borderPhone)
+
+//Creating function for the post
+function createPost(avatarSrc, song, backgroundImg, buttonId, openCommentText, comment, ) {
+    let isOpen = true;
+
+
 
     //creating function for open comment text
     function openCommentTextFn() {
@@ -81,11 +84,12 @@ function createPost(avatarSrc, song, backgroundImg, buttonId, openCommentText, c
     btnLike.className = "btn1 heart";
     btnLike.onclick = "likePostFn()";
     cnt2.append(btnLike)
-    btnLike.addEventListener("click", likePostFn);
+    btnLike.addEventListener("click", likePostFn(buttonId));
 
     //creating button like image
     const btnLikeImg = document.createElement('img')
     btnLikeImg.id = buttonId;
+    btnLikeImg.className = "btn_heart";
     btnLikeImg.style.width = "20px";
     btnLikeImg.style.height = "20px";
     btnLikeImg.src = "./images/heart.png";
