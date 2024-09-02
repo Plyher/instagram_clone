@@ -1,143 +1,84 @@
-let isFilled = false;
-    // creating function for the like button
-    function likePostFn(buttonId) {
-        const img = document.getElementsById(buttonId);
-        if(!isFilled) { 
-            img.src = './images/coeur.png';
-            isFilled = true;
-        } else { 
-            img.src = './images/heart.png';
-           isFilled = false;
+
+    //Creating function for the prameters post
+    function createElementPost(tag, className, attributes, parent, textContent = '') {
+        const el = document.createElement(tag)
+        for(const attr in attributes) {
+            if(attr === 'onclick') {
+                el[attr] = attributes[attr]
+            } else {
+                el[attr] = attributes[attr] 
+            }
+        }
+        if (className) {el.className = className};
+        if (textContent) {el.textContent = textContent};
+        if (parent) {parent.append(el)};
+        return el;
+    }
+
+
+    // Creating border Phone
+    const borderPhone = document.createElement('div');
+    borderPhone.className = "phone";
+    document.body.append(borderPhone)
+    
+    //Creating function for the post
+    function createPost(avatarSrc, song, backgroundImg, buttonId, openCommentText, comment, ) {
+        let isOpen = true;
+        let isFilled = false;
+    
+        // creating function for the like button
+        function likePostFn() {
+            const img = document.getElementById(buttonId);
+            if(!isFilled) { 
+                img.src = './images/coeur.png';
+                isFilled = true;
+            } else { 
+                img.src = './images/heart.png';
+               isFilled = false;
+            };
+        
         };
     
-    };
-
-
-
-// Creating border Phone
-const borderPhone = document.createElement('div');
-borderPhone.className = "phone";
-document.body.append(borderPhone)
-
-//Creating function for the post
-function createPost(avatarSrc, song, backgroundImg, buttonId, openCommentText, comment, ) {
-    let isOpen = true;
-
-
-
-    //creating function for open comment text
-    function openCommentTextFn() {
-        const openText = document.getElementById(openCommentText);
-        if(isOpen) { 
-            openText.style.overflow = 'hidden';
-            isOpen = false;
-        } else { 
-            openText.style.overflow = 'visible';
-            isOpen = true;
-        }
-        
-    };
-
+        //creating function for open comment text
+        function openCommentTextFn() {
+            const openText = document.getElementById(openCommentText);
+            if(isOpen) { 
+                openText.style.overflow = 'hidden';
+                isOpen = false;
+            } else { 
+                openText.style.overflow = 'visible';
+                isOpen = true;
+            }
+            
+        };
+    
     //Creating container 1
-    const cnt = document.createElement('div');
-    cnt.className = "container";
-    cnt.style.backgroundImage = backgroundImg;
-    borderPhone.append(cnt) 
+    const cnt = createElementPost('div', 'container', { style: `background-image: ${backgroundImg}` }, borderPhone);
 
     //creating avatar container
-    const avatar = document.createElement('div')
-    avatar.className = "avatar_container";
-    cnt.append(avatar)
+    const avatar = createElementPost('div', 'avatar_container', {}, cnt);
+    createElementPost('img', 'avatar border', { src: avatarSrc, alt: '' }, avatar);
+    //creating section for name and song
+    const headerTexts = createElementPost('div', 'header_texts', {}, avatar);
+    createElementPost('div', 'name', {}, headerTexts, 'Name');
+    createElementPost('div', 'song', {}, headerTexts, song);
+    //Creating container 2
+    const cnt2 = createElementPost('div', 'container_2', {}, borderPhone);
 
-    //creating avatar image
-    const avatarImg = document.createElement('img')
-    avatarImg.className = "avatar border";
-    avatarImg.src = avatarSrc;
-    avatarImg.alt = "";
-    avatar.append(avatarImg)
+    // Create button like
+    const btnLike = createElementPost('button', 'btn1 heart', { id: "myButtonLike" }, cnt2);
+    btnLike.addEventListener('click', likePostFn);
+    createElementPost('img', 'btn_heart', { id: buttonId, src: './images/heart.png', alt: '', style: 'width: 20px; height: 20px;' }, btnLike);
+    // Create button comment
+    const btnComment = createElementPost('button', 'btn1 comments', {}, cnt2);
+    createElementPost('img', 'btn_heart', { src: './images/comment.png', alt: '', style: 'width: 20px; height: 20px;' }, btnComment);
+    // Create button share
+    const btnShare = createElementPost('button', 'btn1 share', {}, cnt2);
+    createElementPost('img', 'btn_heart', { src: './images/share.png', alt: '', style: 'width: 20px; height: 20px;' }, btnShare);
 
-    //creating section for name and song 
-    const headerTexts = document.createElement('div')
-    headerTexts.className = "header_texts";
-    avatar.append(headerTexts)
-
-    //creating section for name
-    const nameUser = document.createElement('div')
-    nameUser.className = "name";
-    nameUser.textContent = "Name";
-    headerTexts.append(nameUser)
-
-    //creating section for song
-    const songUser = document.createElement('div')
-    songUser.className = "song";
-    songUser.textContent = song;
-    headerTexts.append(songUser) 
-
-    //creating container 2
-    const cnt2 = document.createElement('div');
-    cnt2.className = "container_2";
-    borderPhone.append(cnt2) 
-
-    //creating button like
-    const btnLike = document.createElement('button');
-    btnLike.id = "myButtonLike";
-    btnLike.className = "btn1 heart";
-    btnLike.onclick = "likePostFn()";
-    cnt2.append(btnLike)
-    btnLike.addEventListener("click", likePostFn(buttonId));
-
-    //creating button like image
-    const btnLikeImg = document.createElement('img')
-    btnLikeImg.id = buttonId;
-    btnLikeImg.className = "btn_heart";
-    btnLikeImg.style.width = "20px";
-    btnLikeImg.style.height = "20px";
-    btnLikeImg.src = "./images/heart.png";
-    btnLikeImg.alt = "";
-    btnLike.append(btnLikeImg)
-
-    //creating button comment
-    const btnComment = document.createElement('button');
-    btnComment.id = "myButtonComments";
-    btnComment.className = "btn1 comments";
-    btnComment.onclick = "commentPostFn()";
-    cnt2.append(btnComment)
-    
-    //creating button comment image
-    const btnCommentImg = document.createElement('img')
-    btnCommentImg.id = "comment_btn";
-    btnCommentImg.style.width = "20px";
-    btnCommentImg.style.height = "20px";
-    btnCommentImg.src = "./images/comment.png";
-    btnCommentImg.alt = "";
-    btnComment.append(btnCommentImg) 
-                  
-    //creating button share
-    const btnShare = document.createElement('button');
-    btnShare.id = "myButtonShare";
-    btnShare.className = "btn1 share";
-    btnShare.onclick = "sharePostFn()";
-    cnt2.append(btnShare) 
-
-    //creating button share
-    const btnShareImg = document.createElement('img')
-    btnShareImg.id = "share_btn";
-    btnShareImg.style.width = "20px";
-    btnShareImg.style.height = "20px";
-    btnShareImg.src = "./images/share.png";
-    btnShareImg.alt = "";
-    btnShare.append(btnShareImg) 
-            
-    //creating button text comment for the post
-    const textComment = document.createElement('button');
-    textComment.id = openCommentText;
-    textComment.className = "comment_text";
-    textComment.onclick = "openCommentTextFn()";
-    textComment.textContent = comment;
-    cnt2.append(textComment)              
-    textComment.addEventListener("click", openCommentTextFn);                   
-                            
-                                        
+    // Create text comment
+    const textComment = createElementPost('button', 'comment_text', { id: openCommentText }, cnt2, comment);
+    textComment.addEventListener('click', openCommentTextFn);                       
 };
 
 createPost("./images/avatar.jpg", 'S.O.A.D. - Toxicity', `url('./images/img_1.jpg')`, 'myButtonLike1', 'openCommentText1', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de limprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il na pas fait que survivre cinq siècles, mais sest aussi adapté à la bureautique informatique, sans que son contenu nen soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.');
@@ -145,3 +86,64 @@ createPost("./images/avatar2.jpg", 'S.O.A.D. - Chop suey', `url('./images/img2.j
 createPost("./images/avatar3.jpg", 'S.O.A.D. - Lonely day', `url('./images/img3.jpg')`, 'myButtonLike3', 'openCommentText3', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de limprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il na pas fait que survivre cinq siècles, mais sest aussi adapté à la bureautique informatique, sans que son contenu nen soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.');
 createPost("./images/avatar4.jpg", 'S.O.A.D. - Radio/Video', `url('./images/img4.jpg')`, 'myButtonLike4', 'openCommentText4', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de limprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il na pas fait que survivre cinq siècles, mais sest aussi adapté à la bureautique informatique, sans que son contenu nen soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.');
 createPost("./images/avatar5.jpg", 'S.O.A.D. - Hypnotize', `url('./images/img5.jpg')`, 'myButtonLike5', 'openCommentText5', 'Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de limprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il na pas fait que survivre cinq siècles, mais sest aussi adapté à la bureautique informatique, sans que son contenu nen soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
