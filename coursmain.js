@@ -1,9 +1,15 @@
 // FFFFFFFFFFFFFFFFUUUUUUNNNNNNCCCCCTTTTTTTTIIIIIIIIIIIIIIIOOOOOOONNNNNNNNNN//////////////////////////////
+
+
+// Задание номер 2
 // function two(a, b, c){
 // return(`Привет ${a} ${b} с возрастом ${c} лет!`)
 // };
 // two('Иван', 'Петров', '17')
 
+
+
+// Задание номер 3
 // function three(p){
 //     if(p === 'm') return 'Ваш пол мужской!';
 //     if(p === 'f') return 'Ваш пол Женский!';
@@ -12,6 +18,9 @@
 // }
 // three('m')
 
+
+
+// Задание номер 4
 // function four(i){
     
 //     if(i === 1) {return 'Понедельник'};
@@ -28,6 +37,9 @@
 // four(9)
 
 
+
+
+// Задание номер 5
 // function five(){
 // const text = "Нечего не понимаю я! Возможно и не пойму! Нет я  постараюсь!" 
 // const str1 = text.split(' ')[0];
@@ -38,6 +50,9 @@
 
 // five()
 
+
+
+// Задание номер 6
 // function six(name){
 //     let time = new Date().getHours();
 //     if(time >= 0 && time <= 6){ 
@@ -51,6 +66,9 @@
 // }
 // six("Каролина")
 
+
+
+// Задание номер 7
 // function seven(){
 //     for (let i = 1; i <= 100; i++) {
 //         let ageCategory = '';
@@ -75,7 +93,7 @@
 
 
 
-
+// Задание номер 8
 // const ageFn = (age) => {
 //     if (age <= 17) {
 //         return 'ребенок';
@@ -96,12 +114,16 @@
 
 // console.log(eight("Каролина", 30));
 
+
+
+
+
 // Massive /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // if(arr.forEach((item) % 2 === 0)){return true}
-// else if (arr.forEach((item) % 2 !== 0)){return false}
+// else if (arr.forEach((item) % 2 !== 0)){return false} /////// это просто хочу оставить....
 
 
-
+// Задание номер 1
 // function arr1 (){
 //     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, ];
 //     // for( let i = 0; i < arr.length; i++){
@@ -117,6 +139,10 @@
 // }
 // arr1()
 
+
+
+
+// Задание номер 2
 // function arr2 (){
 //     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, ];
 
@@ -130,6 +156,9 @@
 // arr2()
 
 
+
+
+// Задание номер 3
 // function arr3(){
 //     let arr = [1, 2, 5, 10, 12, 15, 9, ];
 //     const arr2 = arr.filter((item) =>((item % 5) === 0))
@@ -140,6 +169,8 @@
 // arr3()
 
 
+
+// Задание номер 4
 // function arr4 (){
 //     const arr = [1, 2, 3, 4, 5]
 //      let sum = 0;
@@ -148,6 +179,10 @@
 //  }
 //  arr4().toFixed(1)
 
+
+
+
+// Задание номер 5
 // function arr5 (){
 //     const arr = [1, 2, 3, 4, 5]
 //     let cut = arr.shift(0, 1) 
@@ -157,6 +192,9 @@
 // arr5()
 
 
+
+
+// Задание номер 6
 // function arr6 (){
 //     const arr = [{ name: "Ivan", age: 23},{name: "Igor", age:33}]
     
@@ -165,8 +203,16 @@
 // }
 // arr6 ()
 
+
+
+
+
+
 // OOOOOOOOOOOOOOOOOOOOOOOOOOOOBBBBBBBJJJJJJJJJJJEEEEEEEEEEECCCCCCCCCTTTTTTTTTTT/////////////////////////////////
 
+
+
+// Задание номер 1
 // function obj1(){
 //     let obj = {John: 250, Ann: 300, Igor: 350}
 //     let sum = 0;
@@ -177,6 +223,9 @@
 // }
 // obj1()
 
+
+
+// Задание номер 2
 // function obj2(){
 //     let obj = {John: 250, Ann: 300, Igor: 350}
 
@@ -197,6 +246,11 @@
 // }
 // obj2()
 
+
+
+
+
+// Задание номер 3
 // let ladder = {
 //     step: 0,
 //     up() {
@@ -219,9 +273,15 @@
 
 // DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM///////////////////////////////////////
 
+
+
+// Задание номер 1
 // function dom1(){
 //     alert ("Привет мир!")
 // }
+
+
+
 
 // function dom3 (){
 //     const input = document.getElementById("inptext");
@@ -234,7 +294,11 @@
 // }
 // // button.addEventListener("click", dom3())
 
-// function dom2 
+
+
+
+
+// Задание номер 3 
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     const input = document.getElementById("inptexte");
@@ -245,7 +309,11 @@
 //     });
 // });
 
-// function dom4 
+
+
+
+
+// Задание номер 4
 
 // document.addEventListener("DOMContentLoaded", function() {
     
@@ -262,7 +330,10 @@
 //     });
 // });
 
-// function dom5??????????????????????????
+
+
+
+// Задание номер 5??????????????????????????
 
 // document.addEventListener("DOMContentLoaded", function() {
     
@@ -277,7 +348,9 @@
 //         input.disabled =false;});  
 // });
 
-// function dom6
+
+
+// Задание номер 6
 
 
 // let isVisible = true;
@@ -295,7 +368,12 @@
 //     }
     
 // };
-// function dom7
+
+
+
+
+
+// Задание номер 7
 
 
 // document.addEventListener("DOMContentLoaded", function (){
@@ -308,7 +386,13 @@
 // })
 // })
 
-// function dom8 с этого все начиналось........
+
+
+
+
+
+
+// Задание номер 8 с этого все начиналось........
 
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -329,8 +413,7 @@
 // });
 
 
-
-// function dom8 этим все закончилось!!!!
+// Задание номер 8 этим все закончилось!!!!
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     const container = document.querySelector('.container'); 
@@ -365,7 +448,11 @@
 //     });
 // });
 
-// function dom 99999
+
+
+
+
+// Задание номер 999999
 
 // let expression = ''; 
 
@@ -392,7 +479,12 @@
 //         document.getElementById('display').innerText = '0';
 //     }
 
-// regular expressions 1
+// regular expressions //////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// Задание номер 1
+
 
 // http://site.com
 // site.ru/index.php
@@ -413,7 +505,11 @@
 // console.log(isValidUrl("site.ru/index.php"))
 
 
-// regular expressions 2
+
+
+
+
+// Задание номер 2
 
 // const isValidPhoneNumber = (phone) => {
    
@@ -431,8 +527,9 @@
 // console.log(isValidPhoneNumber("8999111"));
 
 
-// AAAAAAAAAAAAAAAASSSSSSSSSYYYYYYYYYYYYNNNNNNNNNNNNNNNCCCCCCCCCCCCCCC
+// AAAAAAAAAAAAAAAASSSSSSSSSYYYYYYYYYYYYNNNNNNNNNNNNNNNCCCCCCCCCCCCCCC///////////////////////////////////////
 
+// Задание номер 1
 // function func(n, callback) {
 //     console.log(n);  
 //     if (n < 10) {
@@ -462,6 +559,11 @@
 // })
 
 
+
+
+
+
+// Задание номер 2
 // function func2(n, callback) {
 //     console.log(n);  
 //     if (n < 10) {
@@ -494,6 +596,9 @@
 //      }))
 
 
+
+// Задание номер 3
+
 // function beAsync(n){
 //     return new Promise((resolve) => {setTimeout(() => resolve(n), 1000);});}
 
@@ -509,6 +614,10 @@
 // beAsync(1)
 
 // //////////////////////////////////////////////////////////////////////////не знаю что не так
+
+
+// Задание номер 4
+
 // function ranodomTime(){
 //     return new Promise((resolve, reject) => {
 //         const rNum = Math.floor(Math.random() * 10) + 1;
@@ -525,6 +634,15 @@
 
 // ranodomTime()
 ///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// Задание номер 5
+
+
+
 
 // function firstPromise() {
 //     return new Promise((resolve) => {
